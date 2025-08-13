@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Glowing Beauty</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+    /* ======== PALETA DE COLORES ======== */
+    :root {
+        --rosa-empolvado: #F5C1C9;
+        --rosa-fucsia: #E79AAE;
+        --blanco-crema: #FFF8F7;
+        --gris-perla: #C9C9C9;
+        --negro-carbon: #1C1C1C;
+    }
+
+    body {
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+        background: var(--blanco-crema);
+        color: var(--negro-carbon);
+        overflow-x: hidden;
+    }
+
+    /* ======== HEADER ======== */
+    header {
+        background: rgba(255, 248, 247, 0.7);
+        backdrop-filter: blur(10px);
+        position: fixed;
+        width: 100%;
+        z-index: 100;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        align-content: center;
+        padding: 20px 20px;
+        border-bottom: 1px solid rgba(255,255,255,0.2);
+    }
+    header h1 {
+        font-family: 'Playfair Display', serif;
+        color: var(--rosa-fucsia);
+        font-size: 1.6rem;
+        margin: 0;
+    }
+    nav {
+        display: flex;
+        padding: 5px;
+        gap: 15px;
+    }
+    nav a {
+        text-decoration: none;
+        color: var(--negro-carbon);
+        font-weight: 500;
+        transition: color 0.3s ease;
+    }
+    nav a:hover {
+        color: var(--rosa-fucsia);
+    }
+
+    /* ======== BOTÓN MENÚ MÓVIL ======== */
+    .menu-toggle {
+        display: none;
+        font-size: 1.8rem;
+        background: none;
+        border: none;
+        cursor: pointer;
+        color: var(--negro-carbon);
+    }
+
+    .nav-links {
+        display: flex;
+        gap: 15px;
+    }
+
+    .nav-links.mobile {
+        display: none;
+        flex-direction: column;
+        background: var(--blanco-crema);
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    /* ======== HERO ======== */
+    .hero {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 90vh;
+        background: linear-gradient(135deg, var(--rosa-empolvado), var(--rosa-fucsia));
+        color: white;
+        text-align: center;
+        padding: 0 20px;
+    }
+    .hero h2 {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+    }
+    .hero p {
+        font-size: 1.1rem;
+        margin-bottom: 20px;
+    }
+    .hero button {
+        background: var(--negro-carbon);
+        color: white;
+        padding: 12px 30px;
+        border: none;
+        border-radius: 25px;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+    .hero button:hover {
+        background: var(--gris-perla);
+        color: var(--negro-carbon);
+    }
+
+    /* ======== PRODUCTOS ======== */
+    .productos {
+        padding: 80px 20px;
+        background: var(--blanco-crema);
+        text-align: center;
+    }
+    .productos h2 {
+        font-family: 'Playfair Display', serif;
+        color: var(--rosa-fucsia);
+        font-size: 2rem;
+        margin-bottom: 40px;
+    }
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+    .producto {
+        background: rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur(15px);
+        border-radius: 20px;
+        padding: 20px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+    }
+    .producto:hover {
+        transform: translateY(-5px);
+    }
+    .producto img {
+        width: 100%;
+        border-radius: 15px;
+        margin-bottom: 15px;
+    }
+    .producto h3 {
+        color: var(--negro-carbon);
+        margin-bottom: 10px;
+        font-size: 1.1rem;
+    }
+    .producto p {
+        color: var(--rosa-fucsia);
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+    .producto button {
+        background: var(--rosa-fucsia);
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: background 0.3s;
+    }
+    .producto button:hover {
+        background: var(--rosa-empolvado);
+    }
+
+    /* ======== SOBRE NOSOTROS ======== */
+    .sobre {
+        padding: 80px 20px;
+        background: var(--rosa-empolvado);
+        text-align: center;
+        color: var(--negro-carbon);
+    }
+    .sobre h2 {
+        font-family: 'Playfair Display', serif;
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+    .sobre p {
+        max-width: 800px;
+        margin: auto;
+        line-height: 1.6;
+        font-size: 1rem;
+    }
+
+    /* ======== CONTACTO ======== */
+    .contacto {
+        padding: 80px 20px;
+        background: var(--blanco-crema);
+        text-align: center;
+    }
+    .contacto h2 {
+        font-family: 'Playfair Display', serif;
+        color: var(--rosa-fucsia);
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+    .contacto a {
+        display: inline-block;
+        background: var(--rosa-fucsia);
+        color: white;
+        padding: 15px 30px;
+        border-radius: 30px;
+        text-decoration: none;
+        font-size: 1.1rem;
+        transition: background 0.3s;
+    }
+    .contacto a:hover {
+        background: var(--rosa-empolvado);
+    }
+
+    /* ======== BOTÓN WHATSAPP ======== */
+    .whatsapp {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: #25D366;
+        color: white;
+        padding: 15px;
+        border-radius: 50%;
+        font-size: 1.5rem;
+        text-align: center;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        z-index: 200;
+        text-decoration: none;
+    }
+
+    /* ======== FOOTER ======== */
+    footer {
+        background: var(--negro-carbon);
+        color: white;
+        text-align: center;
+        padding: 20px;
+        font-size: 0.9rem;
+    }
+
+    /* ======== RESPONSIVE ======== */
+    @media (max-width: 768px) {
+        header h1 {
+            font-size: 1.4rem;
+        }
+        .hero h2 {
+            font-size: 2rem;
+        }
+        .hero p {
+            font-size: 1rem;
+        }
+        nav {
+            display: none;
+        }
+        .menu-toggle {
+            display: block;
+        }
+    }
+</style>
+</head>
+<body>
+
+<header>
+    <h1>Glowing Beauty</h1>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <nav id="menu" class="nav-links">
+        <a href="#productos">Productos</a>
+        <a href="#sobre">Sobre Nosotros</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div>
+        <h2>Tu Belleza, Tu Brillo</h2>
+        <p>Experiencias únicas y personalizadas en cuidado de la piel y maquillaje</p>
+        <button onclick="document.getElementById('productos').scrollIntoView({behavior: 'smooth'});">Ver Productos</button>
+    </div>
+</section>
+
+<section class="productos" id="productos">
+    <h2>Nuestros Productos</h2>
+    <div class="grid">
+        <div class="producto">
+            <img src="https://images.unsplash.com/photo-1614310551513-bca0b35c97db" alt="Mascarilla Hidratante">
+            <h3>Mascarilla Hidratante</h3>
+            <p>$35.000</p>
+            <button onclick="comprar('Mascarilla Hidratante')">Comprar</button>
+        </div>
+        <div class="producto">
+            <img src="https://images.unsplash.com/photo-1616279962103-3fbb2d9d6c3d" alt="Mascarilla Purificante">
+            <h3>Mascarilla Purificante</h3>
+            <p>$35.000</p>
+            <button onclick="comprar('Mascarilla Purificante')">Comprar</button>
+        </div>
+        <div class="producto">
+            <img src="https://images.unsplash.com/photo-1585238342020-9661c8f3f7ec" alt="Mascarilla Equilibrante">
+            <h3>Mascarilla Equilibrante</h3>
+            <p>$35.000</p>
+            <button onclick="comprar('Mascarilla Equilibrante')">Comprar</button>
+        </div>
+        <div class="producto">
+            <img src="https://images.unsplash.com/photo-1596464716127-f2a82984de30" alt="Crema Facial de Día">
+            <h3>Crema Facial de Día con SPF</h3>
+            <p>$45.000</p>
+            <button onclick="comprar('Crema Facial de Día con SPF')">Comprar</button>
+        </div>
+        <div class="producto">
+            <img src="https://images.unsplash.com/photo-1600185365483-26d7e5cc06ff" alt="Crema Nutritiva de Noche">
+            <h3>Crema Nutritiva de Noche</h3>
+            <p>$45.000</p>
+            <button onclick="comprar('Crema Nutritiva de Noche')">Comprar</button>
+        </div>
+        <div class="producto">
+            <img src="https://images.unsplash.com/photo-1583875762486-191ff47832fc" alt="Sérum Antiedad">
+            <h3>Sérum Antiedad con Ácido Hialurónico</h3>
+            <p>$60.000</p>
+            <button onclick="comprar('Sérum Antiedad con Ácido Hialurónico')">Comprar</button>
+        </div>
+        <div class="producto">
+            <img src="https://images.unsplash.com/photo-1615844927137-9ce7f7dedf77" alt="Lip Gloss Bloomshell">
+            <h3>Lip Gloss Bloomshell</h3>
+            <p>$25.000</p>
+            <button onclick="comprar('Lip Gloss Bloomshell')">Comprar</button>
+        </div>
+        <div class="producto">
+            <img src="https://images.unsplash.com/photo-1584270354949-c26b0f19a34b" alt="Limpiador Facial Suave">
+            <h3>Limpiador Facial Suave</h3>
+            <p>$40.000</p>
+            <button onclick="comprar('Limpiador Facial Suave')">Comprar</button>
+        </div>
+        <div class="producto">
+            <img src="https://images.unsplash.com/photo-1600180758890-bb7a8f5a4a50" alt="Tónico Iluminador">
+            <h3>Tónico Iluminador</h3>
+            <p>$38.000</p>
+            <button onclick="comprar('Tónico Iluminador')">Comprar</button>
+        </div>
+    </div>
+</section>
+
+<section class="sobre" id="sobre">
+    <h2>Sobre Nosotros</h2>
+    <p>En Glowing Beauty creemos que la belleza no es un estándar, sino una expresión personal. Creamos experiencias únicas a través de cajas y productos que cuidan tu piel, realzan tu esencia y te hacen brillar desde adentro hacia afuera. Nuestra misión es inspirar confianza, amor propio y bienestar en cada cliente.</p>
+</section>
+
+<section class="contacto" id="contacto">
+    <h2>Contáctanos</h2>
+    <a href="https://wa.me/573246495538" target="_blank">Escríbenos por WhatsApp</a>
+</section>
+
+<a class="whatsapp" href="https://wa.me/573246495538" target="_blank">💬</a>
+
+<footer>
+    &copy; 2025 Glowing Beauty - Todos los derechos reservados
+</footer>
+
+<script>
+function comprar(producto) {
+    window.open(`https://wa.me/573246495538?text=Hola, quiero comprar el producto ${encodeURIComponent(producto)}`, '_blank');
+}
+
+function toggleMenu() {
+    const menu = document.getElementById("menu");
+    if (menu.style.display === "flex") {
+        menu.style.display = "none";
+    } else {
+        menu.style.display = "flex";
+        menu.style.flexDirection = "column";
+    }
+}
+</script>
+
+</body>
+</html>
