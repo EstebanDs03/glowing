@@ -196,6 +196,21 @@ nav a:hover {
   font-size: 1rem;
 }
 
+.sobre a {
+  display: inline-block;
+  background: var(--rosa-fucsia);
+  color: white;
+  padding: 15px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: background 0.3s;
+}
+
+.sobre a:hover {
+  background: var(--rosa-empolvado);
+}
+
 /* ======== CONTACTO ======== */
 .contacto {
   padding: 80px 20px;
