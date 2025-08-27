@@ -1,152 +1,194 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Glowing Beauty</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glowing Beauty</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<header>
-    <h1>Glowing Beauty</h1>
-    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-    <nav id="menu" class="nav-links">
-        <a href="#productos">Productos</a>
-        <a href="#sobre">Sobre Nosotros</a>
-        <a href="#contacto">Contacto</a>
-    </nav>
-</header>
-
-<section class="hero">
-    <div>
-        <h2>Tu Belleza, Tu Brillo</h2>
-        <p>Experiencias únicas y personalizadas en cuidado de la piel y maquillaje</p>
-        <button onclick="document.getElementById('productos').scrollIntoView({behavior: 'smooth'});">Ver Productos</button>
-    </div>
-</section>
-
-<section class="productos" id="productos">
-    <h2>Nuestros Productos</h2>
-    <div class="grid">
-        <div class="producto">
-            <img src="images/productos/bloqueador.jpg" alt="Mascarilla Hidratante">
-            <h3>Bloqueador solar de FOTOEQUILIBRIO DE NATURA al 50%</h3>
-            <p>$35.000</p>
-            <button onclick="comprar('Mascarilla Hidratante')">Comprar</button>
+    <header>
+        <img src="images/image.png" alt="">
+        <h1>Glowing Beauty</h1>
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <nav id="menu" class="nav-links">
+            <a href="#productos">Productos</a>
+            <a href="#sobre">Sobre Nosotros</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+        <div class="redes-sociales">
+            <a href="https://www.instagram.com/tuusuario" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/tuusuario" target="_blank">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.tiktok.com/@tuusuario" target="_blank">
+                <i class="fab fa-tiktok "></i>
+            </a>
         </div>
-        <div class="producto">
-            <img src="https://images.unsplash.com/photo-1616279962103-3fbb2d9d6c3d" alt="Mascarilla Purificante">
-            <h3>Mascarilla Purificante</h3>
-            <p>$35.000</p>
-            <button onclick="comprar('Mascarilla Purificante')">Comprar</button>
+    </header>
+
+    <section class="hero">
+        <div>
+            <h2>Tu Belleza, Tu Brillo</h2>
+            <p>Experiencias únicas y personalizadas en cuidado de la piel y maquillaje</p>
+            <button onclick="document.getElementById('productos').scrollIntoView({behavior: 'smooth'});">Ver
+                Productos</button>
         </div>
-        <div class="producto">
-            <img src="https://images.unsplash.com/photo-1585238342020-9661c8f3f7ec" alt="Mascarilla Equilibrante">
-            <h3>Mascarilla Equilibrante</h3>
-            <p>$35.000</p>
-            <button onclick="comprar('Mascarilla Equilibrante')">Comprar</button>
+    </section>
+
+    <section class="productos" id="productos">
+        <h2>Nuestros Productos</h2>
+        <div class="grid">
+            <div class="producto">
+                <img src="images/productos/bloqueador.jpg" alt="Mascarilla Hidratante">
+                <h3>Bloqueador solar de FOTOEQUILIBRIO DE NATURA al 50%</h3>
+                <p>$35.000</p>
+                <button onclick="comprar('Mascarilla Hidratante')">Comprar</button>
+            </div>
+            <div class="producto">
+                <img src="images/productos/labial.jpg" alt="Mascarilla Purificante">
+                <h3>Labial Bloom Jelly de Bloomshell</h3>
+                <p>$35.000</p>
+                <button onclick="comprar('Mascarilla Purificante')">Comprar</button>
+            </div>
+            <div class="producto">
+                <img src="https://images.unsplash.com/photo-1585238342020-9661c8f3f7ec" alt="Mascarilla Equilibrante">
+                <h3>Mascarilla Equilibrante</h3>
+                <p>$35.000</p>
+                <button onclick="comprar('Mascarilla Equilibrante')">Comprar</button>
+            </div>
+            <div class="producto">
+                <img src="https://images.unsplash.com/photo-1596464716127-f2a82984de30" alt="Crema Facial de Día">
+                <h3>Crema Facial de Día con SPF</h3>
+                <p>$45.000</p>
+                <button onclick="comprar('Crema Facial de Día con SPF')">Comprar</button>
+            </div>
+            <div class="producto">
+                <img src="https://images.unsplash.com/photo-1600185365483-26d7e5cc06ff" alt="Crema Nutritiva de Noche">
+                <h3>Crema Nutritiva de Noche</h3>
+                <p>$45.000</p>
+                <button onclick="comprar('Crema Nutritiva de Noche')">Comprar</button>
+            </div>
+            <div class="producto">
+                <img src="https://images.unsplash.com/photo-1583875762486-191ff47832fc" alt="Sérum Antiedad">
+                <h3>Sérum Antiedad con Ácido Hialurónico</h3>
+                <p>$60.000</p>
+                <button onclick="comprar('Sérum Antiedad con Ácido Hialurónico')">Comprar</button>
+            </div>
+            <div class="producto">
+                <img src="images/productos/crema.jpg" alt="Lip Gloss Bloomshell">
+                <h3>Crema hidratante de BIOAQUA Centella Asiática</h3>
+                <p>$25.000</p>
+                <button onclick="comprar('Lip Gloss Bloomshell')">Comprar</button>
+            </div>
+            <div class="producto">
+                <img src="images/productos/glossy.jpg" alt="Limpiador Facial Suave">
+                <h3>GLOSSY COLOR de brillitos</h3>
+                <p>$40.000</p>
+                <button onclick="comprar('Limpiador Facial Suave')">Comprar</button>
+            </div>
+            <div class="producto">
+                <img src="images/productos/blosh.jpg" alt="Tónico Iluminador">
+                <h3>Corrector bloomshell 10ml</h3>
+                <p>$38.000</p>
+                <button onclick="comprar('Tónico Iluminador')">Comprar</button>
+            </div>
         </div>
-        <div class="producto">
-            <img src="https://images.unsplash.com/photo-1596464716127-f2a82984de30" alt="Crema Facial de Día">
-            <h3>Crema Facial de Día con SPF</h3>
-            <p>$45.000</p>
-            <button onclick="comprar('Crema Facial de Día con SPF')">Comprar</button>
+    </section>
+
+    <section class="sobre" id="sobre">
+        <h2>Sobre Nosotros</h2>
+        <p>En Glowing Beauty creemos que la belleza no es un estándar, sino una expresión personal. Creamos experiencias
+            únicas a través de cajas y productos que cuidan tu piel, realzan tu esencia y te hacen brillar desde adentro
+            hacia afuera. Nuestra misión es inspirar confianza, amor propio y bienestar en cada cliente.</p>
+    </section>
+
+    <section class="contacto" id="contacto">
+        <h2>Contáctanos</h2>
+        <p class="frase-contacto">¿Tienes dudas o quieres más información? ¡Estamos aquí para ti!</p>
+
+        <a href="https://wa.me/573246495538" target="_blank">Escríbenos por WhatsApp</a>
+
+        <div class="redes-sociales">
+            <a href="https://www.instagram.com/tuusuario" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/tuusuario" target="_blank">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://www.tiktok.com/@tuusuario" target="_blank">
+                <i class="fab fa-tiktok"></i>
+            </a>
         </div>
-        <div class="producto">
-            <img src="https://images.unsplash.com/photo-1600185365483-26d7e5cc06ff" alt="Crema Nutritiva de Noche">
-            <h3>Crema Nutritiva de Noche</h3>
-            <p>$45.000</p>
-            <button onclick="comprar('Crema Nutritiva de Noche')">Comprar</button>
+    </section>
+
+    <section id="equipo">
+        <div class="titulo">
+            <h2>Conoce a Nuestro Equipo</h2>
+            <p>Ellas son las encargadas de darle vida y dirección a nuestro negocio</p>
         </div>
-        <div class="producto">
-            <img src="https://images.unsplash.com/photo-1583875762486-191ff47832fc" alt="Sérum Antiedad">
-            <h3>Sérum Antiedad con Ácido Hialurónico</h3>
-            <p>$60.000</p>
-            <button onclick="comprar('Sérum Antiedad con Ácido Hialurónico')">Comprar</button>
+
+        <div class="grid">
+
+            <!-- Persona 1 -->
+            <div class="card">
+                <img src="images/persona2.jpg" alt="Encargada de contenido">
+                <div class="info">
+                    <h3 class="nombre">Karen Sánchez</h3>
+                    <h3>Encargada de Contenido</h3>
+                    <p>Se encarga de garantizar que todo el contenido publicado sea adecuado y visualmente atractivo,
+                        además de supervisar que cada producto destinado a la venta se encuentre en óptimas condiciones.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Persona 2 -->
+            <div class="card">
+                <img src="images/persona1.jpg" alt="Encargada de marketing y ventas">
+                <div class="info">
+                    <h3 class="nombre">Michell Durango</h3>
+                    <h3>Marketing & Ventas</h3>
+                    <p>Se encarga de la gestión de marketing, la creación de contenido para redes sociales y el área de
+                        ventas, asegurando una comunicación estratégica y efectiva para impulsar el crecimiento del
+                        negocio.</p>
+                </div>
+            </div>
+
         </div>
-        <div class="producto">
-            <img src="https://images.unsplash.com/photo-1615844927137-9ce7f7dedf77" alt="Lip Gloss Bloomshell">
-            <h3>Lip Gloss Bloomshell</h3>
-            <p>$25.000</p>
-            <button onclick="comprar('Lip Gloss Bloomshell')">Comprar</button>
-        </div>
-        <div class="producto">
-            <img src="https://images.unsplash.com/photo-1584270354949-c26b0f19a34b" alt="Limpiador Facial Suave">
-            <h3>Limpiador Facial Suave</h3>
-            <p>$40.000</p>
-            <button onclick="comprar('Limpiador Facial Suave')">Comprar</button>
-        </div>
-        <div class="producto">
-            <img src="images/productos/blosh.jpg" alt="Tónico Iluminador">
-            <h3>Tónico Iluminador</h3>
-            <p>$38.000</p>
-            <button onclick="comprar('Tónico Iluminador')">Comprar</button>
-        </div>
-    </div>
-</section>
+    </section>
 
-<section class="sobre" id="sobre">
-    <h2>Sobre Nosotros</h2>
-    <p>En Glowing Beauty creemos que la belleza no es un estándar, sino una expresión personal. Creamos experiencias únicas a través de cajas y productos que cuidan tu piel, realzan tu esencia y te hacen brillar desde adentro hacia afuera. Nuestra misión es inspirar confianza, amor propio y bienestar en cada cliente.</p>
-</section>
+    <a class="whatsapp" href="https://wa.me/573246495538" target="_blank">✉️
+    </a>
 
-<section class="contacto" id="contacto">
-    <h2>Contáctanos</h2>
-    <a href="https://wa.me/573246495538" target="_blank">Escríbenos por WhatsApp</a>
-</section>
+    <footer>
+        &copy; 2025 Glowing Beauty - Todos los derechos reservados
+    </footer>
 
-<section id="equipo">
-  <div class="titulo">
-    <h2>Conoce a Nuestro Equipo</h2>
-    <p>Ellas son las encargadas de darle vida y dirección a nuestro negocio</p>
-  </div>
+    <script>
+        function comprar(producto) {
+            window.open(`https://wa.me/573246495538?text=Hola, quiero comprar el producto ${encodeURIComponent(producto)}`, '_blank');
+        }
 
-  <div class="grid">
-    
-    <!-- Persona 1 -->
-    <div class="card">
-      <img src="images/persona2.jpg" alt="Encargada de contenido">
-      <div class="info">
-        <h3>Encargada de Contenido</h3>
-        <p>Se encarga de garantizar que todo el contenido publicado sea adecuado y visualmente atractivo, además de supervisar que cada producto destinado a la venta se encuentre en óptimas condiciones.</p>
-      </div>
-    </div>
-
-    <!-- Persona 2 -->
-    <div class="card">
-      <img src="images/persona1.jpg" alt="Encargada de marketing y ventas">
-      <div class="info">
-        <h3>Marketing & Ventas</h3>
-        <p>Se encarga de la gestión de marketing, la creación de contenido para redes sociales y el área de ventas, asegurando una comunicación estratégica y efectiva para impulsar el crecimiento del negocio.</p>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<a class="whatsapp" href="https://wa.me/573246495538" target="_blank">💬</a>
-
-<footer>
-    &copy; 2025 Glowing Beauty - Todos los derechos reservados
-</footer>
-
-<script>
-function comprar(producto) {
-    window.open(`https://wa.me/573246495538?text=Hola, quiero comprar el producto ${encodeURIComponent(producto)}`, '_blank');
-}
-
-function toggleMenu() {
-    const menu = document.getElementById("menu");
-    if (menu.style.display === "flex") {
-        menu.style.display = "none";
-    } else {
-        menu.style.display = "flex";
-        menu.style.flexDirection = "column";
-    }
-}
-</script>
+        function toggleMenu() {
+            const menu = document.getElementById("menu");
+            if (menu.style.display === "flex") {
+                menu.style.display = "none";
+            } else {
+                menu.style.display = "flex";
+                menu.style.flexDirection = "column";
+            }
+        }
+    </script>
 
 </body>
+
 </html>
